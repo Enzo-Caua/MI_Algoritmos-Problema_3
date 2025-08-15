@@ -1,0 +1,50 @@
+(Sessão 1)
+
+1. Quais são as melhores práticas para implementar a funcionalidade de salvamento do jogo durante uma partida?
+    - Arquivo .json - https://youtu.be/-e7Jh2Cy3Os?si=DJkS0KlBAy-AElc4
+    - Arquivo .txt - https://www.youtube.com/watch?v=AvUG8wZMh_E
+    - Arquivo binario
+    - Biblioteca Pickle - https://www.youtube.com/watch?v=_U8CVLvm8e8
+    - Arquivo CSV
+
+2. Quais técnicas podem ser utilizadas para esconder os objetivos específicos de cada jogador de modo eficaz?
+    import os
+    def limpar_terminal():
+        """
+        Limpa o terminal no sistema operacional em que o script está sendo executado.
+        """
+        # Verifica o sistema operacional
+        if os.name == 'nt':
+            # Se for Windows
+            os.system('cls')
+        else:
+            # Se for Unix/Linux/MacOS
+            os.system('clear')
+    # Exemplo de uso
+    limpar_terminal()
+
+3. Qual abordagem é mais eficiente e conveniente para os jogadores: salvamento manual ou automático?
+    - Salvamento automatico a cada jogada, pois não corre o risco fechar sem registrar a partida
+
+4. Quais critérios ou métodos podem ser utilizados para decidir qual jogador irá iniciar o jogo?
+    - Utilizar random.choices() para escolher
+
+5. Quais são as diferentes opções disponíveis para adicionar efeitos sonoros ao jogo?
+    - Biblioteca winsound (So funciona pra windows)
+    - Unica opção sem arquivo viavel é o Pygame
+    - sounddevice
+    - simpleaudio
+    - scipy
+
+6. Quais são as melhores práticas para apresentar o tabuleiro do jogo de maneira clara e precisa?
+    - Print formatado
+    - Biblioteca Tabulate
+    - Biblioteca Pretty Tables (Permite usar csv) 
+    
+    - Tabulate é mais pra tabela, Pretty Tables fica mais organizado e suporta CSV porem é complicado
+    - print formatado é o mais facil ja q não precisa entender biblioteca
+
+7. Como é possível implementar a exibição de cores no terminal de forma eficiente e compatível com diferentes sistemas?
+    - Padrão do Python
+    - Biblioteca Colorama
+    - Biblioteca rich
